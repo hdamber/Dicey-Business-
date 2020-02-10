@@ -7,6 +7,7 @@ document.body.appendChild(container);
 let counter = 0;
 let diceArr = []
 
+
 class Die {
     constructor(value) {
         this.div = document.createElement('div');
@@ -16,7 +17,7 @@ class Die {
         this.roll()
         diceArr.push(this)
         container.appendChild(this.div);
-        this.div.addEventListener('click', () => this.roll());
+        this.div.addEventListener('click', () => this.roll());  //click on die rolls only that die
     }
     
     roll() {
@@ -25,10 +26,11 @@ class Die {
         this.div.innerHTML = this.value
     }
 
+
+
 }
 
-
-buttonAdd.addEventListener('click', function () {
+btnA.addEventListener('click', function () {
     new Die();
     counter++
 })
